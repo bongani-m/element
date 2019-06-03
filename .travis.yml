@@ -11,17 +11,15 @@ env:
 
 before_install:
   -  # Install Ganache & Truffle
-  - npm i -g firebase-tools@6.1.1 ganache-cli@6.1.0 truffle@5.0.8
-  - ganache-cli -i 133700 -m "$ELEMENT_MNEUMONIC" &>/dev/null &
+  - npm i -g firebase-tools@6.1.1
+  - npm i
+  - npm run ganache &>/dev/null &
   # Install IPFS
   - wget "https://dist.ipfs.io/go-ipfs/v0.4.19/go-ipfs_v0.4.19_linux-amd64.tar.gz" -O /tmp/ipfs.tar.gz
   - pushd . && cd $HOME/bin && tar -xzvf /tmp/ipfs.tar.gz && popd
   - export PATH="$HOME/bin/go-ipfs:$PATH"
   - ipfs init
   - ipfs daemon &>/dev/null &
-#   - npm i -g firebase-tools@6.1.1
-#   - npm i
-#   - npm run ganache &>/dev/null &
 #   - npm run ipfs:init
 #   - npm run ipfs &>/dev/null &
   - sleep 10
