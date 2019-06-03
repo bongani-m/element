@@ -10,7 +10,7 @@ const {
   // eslint-disable-next-line
 } = require('../__tests__/__fixtures__');
 
-jest.setTimeout(10 * 1000);
+jest.setTimeout(20 * 1000);
 
 let storage;
 let blockchain;

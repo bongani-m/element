@@ -7,6 +7,9 @@
     "lint": "lerna run lint",
     "test": "lerna run test --stream",
     "coverage": "lerna run coverage --ignore @transmute/element-api --stream",
+    "ganache": ". ./example.env && ganache-cli -i 133700 -m \"$ELEMENT_MNEMONIC\"",
+    "ipfs:init": "ipfs init",
+    "ipfs": "ipfs daemon",
     "test:contracts": "lerna run test:contracts",
     "create-local-runtimeconfig": "lerna run create-local-runtimeconfig",
     "contracts:migrate:dev": "lerna run contracts:migrate:dev",
@@ -15,6 +18,8 @@
   },
   "devDependencies": {
     "codecov": "^3.1.0",
+    "ganache-cli": "^6.1.0",
+    "go-ipfs": "^0.4.18-hacky2",
     "husky": "^1.3.1",
     "lerna": "^3.14.1",
     "tar": ">=2.2.2"

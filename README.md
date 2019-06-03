@@ -19,7 +19,17 @@ See [.travis.yml](./.travis.yml) for setup and test commands.
 ```
 npm i
 npm run bootstrap
+
+# Running the smart contract tests
+npm run ganache # In a separate shell
 npm run test:contracts
+
+# Migrating the contracts
+npm run create-local-runtimeconfig
 npm run contracts:migrate:dev
+
+# Run all other tests
+npm run ipfs:init # Only need to run that once
+npm run ipfs # In a separate shell
 npm run test
 ```
