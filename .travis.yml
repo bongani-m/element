@@ -15,10 +15,8 @@ before_install:
   - npm i
   - npm run ganache &>/dev/null &
   # Install IPFS
-#   - npm run ipfs:init
-#   - npm run ipfs &>/dev/null &
-  - ipfs init
-  - ipfs daemon &>/dev/null &
+  - npm run ipfs:init
+  - npm run ipfs &>/dev/null &
   - sleep 10
   - curl -s http://localhost:5001/api/v0/id | jq -r '.'
   - curl -s -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":0}' http://localhost:8545 | jq -r '.'
