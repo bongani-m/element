@@ -12,7 +12,7 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "test": "jest --runInBand ",
-    "coverage": "jest --runInBand --coverage ",
+    "coverage": "jest --runInBand --coverage --forceExit",
     "test:contracts": "truffle test",
     "contracts:migrate:dev": "truffle migrate --network development --reset",
     "contracts:migrate:ropsten": "truffle migrate --network ropsten"
